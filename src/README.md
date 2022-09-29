@@ -1,5 +1,6 @@
 # dreadful-tomato
 front end assesment
+ ```npm --logevel=error install```
 
 # Instructions
 https://ginger-cheese-954.notion.site/Dreadful-Tomato-78b07e551e8c4965ba1d3de181b22944
