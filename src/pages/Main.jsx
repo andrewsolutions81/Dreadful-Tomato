@@ -9,7 +9,7 @@ export default function Main() {
   tab === "movies"? <Movies /> : <Shows />
 
   return (
-    <div>Main
+    <div>
       <Header changeTab={setTab} tab={tab}/>
       <div>{tab}</div>
     </div>
