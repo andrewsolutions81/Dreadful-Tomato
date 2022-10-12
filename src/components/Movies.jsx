@@ -1,7 +1,17 @@
 import React from 'react'
+import SingleMovie from './SingleMovie'
+import './Movies.styles.css'
+import { moviesList } from '../utils/data'
+const movies = moviesList
 
-export default function Movies() {
+function Movies({movieList}) {
   return (
-    <div>Movies</div>
+    movies.map((movieList) => {
+      return(
+        <SingleMovie movieList={movieList} />
+      )
+    })
   )
 }
+
+export default Movies

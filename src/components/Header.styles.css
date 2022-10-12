@@ -1,4 +1,6 @@
+
 .header-main {
+  display: flex;
   background-color: black;
   color: white;
 }

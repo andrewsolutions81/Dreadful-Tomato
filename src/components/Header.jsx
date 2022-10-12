@@ -9,14 +9,14 @@ export default function Header( {changeTab , tab}  ) {
     series:'black'
   })
 
-  const handleTab = (selectedTab) => {
-    changeTab(selectedTab);
-    if(selectedTab === "movies"){
+  const handleTab = (tab) => {
+    changeTab(tab);
+    if(tab === "movies"){
       setBtnStyle({
         movies:'red',
         series:'black'
       })
-    }else {
+    } else {
       setBtnStyle({
         movies:'black',
         series:'red'
