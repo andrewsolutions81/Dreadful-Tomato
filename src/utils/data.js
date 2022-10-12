@@ -1307,6 +1307,7 @@ const data = {
 
 const list = data.entries
 
+
 export const moviesList = list.filter(movie => {
   return movie.programType === "movie"
 })

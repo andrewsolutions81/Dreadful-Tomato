@@ -1,14 +1,14 @@
 import React from 'react'
 import SingleMovie from './SingleMovie'
 import './Movies.styles.css'
-import { moviesList } from '../utils/data'
-const movies = moviesList
 
-function Movies({movieList}) {
+
+function Movies({moviesList}) {
+
   return (
-    movies.map((movieList) => {
+    moviesList.map((movie) => {
       return(
-        <SingleMovie movieList={movieList} />
+        <SingleMovie movie={movie}  key={movie.title}/>
       )
     })
   )

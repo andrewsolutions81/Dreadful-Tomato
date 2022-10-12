@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import Header from '../components/Header'
 import Movies from '../components/Movies'
 import Shows from '../components/Shows'
-import { moviesList,seriesList } from '../utils/data';
+import { moviesList, seriesList } from '../utils/data';
 
-export default function Main({ moviesList,seriesList }) {
+export default function Main() {
+
   const [tab, setTab] = useState("movies")
   let pageShown = <Movies />
 
