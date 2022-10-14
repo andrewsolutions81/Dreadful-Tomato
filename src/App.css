@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* header start */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: black;
+  color: white;
+  flex-wrap:initial;
+  justify-content: space-between;
+}
+.header-title{
+  height: 10px;
+  padding-left: 40px;
+  padding-top: -4px;
+}
+
+.header-buttons{
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-inputs {
+  background-color: red;
+  display: flex;
+  justify-content: space-around;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+.black{
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* header end */
+
+/* movie page start */
+.main-container{
+  background-color: black;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.page__container {
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.every__item {
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.card__item {
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  width:200px;
+}
+
+.card__image {
+  width: 100%;
+}
+
+
+.card__description {
+  display: none ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+/* movie page start */
+
+.landing__container {
+  background-color: black;
+  color: white;
+  display: flex;
+  cursor: pointer;
+
+}
+
+.landing__movies {
+  width: 50%;
+  height:min-content;
+  justify-content: center;
+}
+.landing__series {
+  width: 50%;
+  height:min-content;
+  justify-content: center;
+}
+
+.shade {
+  background-color: black
+}
+.landing__title {
+  position: absolute;
+  padding-left: 120px;
+  padding-bottom: 12px;
+}
+
+.landing__poster {
+  max-width:100%;
+  max-height:3000px;
 }

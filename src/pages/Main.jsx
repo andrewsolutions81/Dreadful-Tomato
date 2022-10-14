@@ -12,9 +12,11 @@ export default function Main() {
   tab === "movies"? pageShown = <Movies moviesList={moviesList} /> : pageShown = <Series seriesList={seriesList}/>
 
   return (
-    <div>
+    <div className='main-container'>
       <Header changeTab={setTab} tab={tab}/>
-      {pageShown}
+      <div className='page__container'>
+       {pageShown}
+      </div>
     </div>
   )
 }

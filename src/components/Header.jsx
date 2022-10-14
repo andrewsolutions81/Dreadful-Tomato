@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './Header.styles.css'
 
 export default function Header( {changeTab , tab}  ) {
   const [input, setInput] = useState("");
@@ -27,11 +26,12 @@ export default function Header( {changeTab , tab}  ) {
   return (
     <div className='header'>
       <div className='header-main'>
-        <h1 className='header-title'>Dreadful tomatoes</h1>
+        <h2 className='header-title'>Dreadful tomatoes</h2>
           <div className='header-buttons'>
             <button type='button' className={`header-button movies-btn ${btnStyle.movies}`} onClick={() => handleTab('movies')} >movies</button>
             <button type='button' className={`header-button movies-btn ${btnStyle.series}`} onClick={() => handleTab('series')} >series</button>
           </div>
+          <div className='header__additional--links'></div>
           <div className='header-filters'>filters</div>
           <div className='header-login'>login</div>
           <div className='header-trial'>start your free trial</div>
@@ -44,7 +44,7 @@ export default function Header( {changeTab , tab}  ) {
           type="text"
           placeholder="Name"
         />
-                <input
+        <input
           value={date}
           onChange={(e) => setDate(e.target.value)}
           className="prompt"
