@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 
-export default function Header( {changeTab , tab}  ) {
-  const [input, setInput] = useState("");
+export default function Header( {changeTab , tab, search, setSearch}  ) {
+
   const [date, setDate] = useState("");
+
   const [btnStyle, setBtnStyle] = useState({
     movies:'red',
     series:'black'
@@ -38,8 +39,8 @@ export default function Header( {changeTab , tab}  ) {
       </div>
       <div className='header-inputs'>
         <input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
           className="prompt"
           type="text"
           placeholder="Name"
