@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Header( {changeTab , tab, search, setSearch}  ) {
-
-  const [date, setDate] = useState("");
+export default function Header( {setTab , search, setSearch}  ) {
 
   const [btnStyle, setBtnStyle] = useState({
     movies:'red',
@@ -10,7 +9,7 @@ export default function Header( {changeTab , tab, search, setSearch}  ) {
   })
 
   const handleTab = (tab) => {
-    changeTab(tab);
+    setTab(tab);
     if(tab === "movies"){
       setBtnStyle({
         movies:'red',
@@ -33,7 +32,7 @@ export default function Header( {changeTab , tab, search, setSearch}  ) {
             <button type='button' className={`header-button movies-btn ${btnStyle.series}`} onClick={() => handleTab('series')} >series</button>
           </div>
           <div className='header__additional--links'></div>
-          <div className='header-filters'>filters</div>
+          <Link to='/main' className='header-filters'>filters</Link>
           <div className='header-login'>login</div>
           <div className='header-trial'>start your free trial</div>
       </div>
@@ -44,13 +43,6 @@ export default function Header( {changeTab , tab, search, setSearch}  ) {
           className="prompt"
           type="text"
           placeholder="Name"
-        />
-        <input
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          className="prompt"
-          type="text"
-          placeholder="date"
         />
       </div>
     </div>
