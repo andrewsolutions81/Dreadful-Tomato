@@ -45,6 +45,10 @@
   color: white;
 }
 
+.black__background {
+  background-color: black;
+}
+
 .page__container {
   display:flex;
   flex-wrap:wrap;
@@ -59,20 +63,39 @@
   border-radius: 10px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
-  width:200px;
+  width:300px;
+}
+
+.card__info {
+  position: relative;
+  cursor: pointer;
+  position: relative;
 }
 
 .card__image {
   width: 100%;
 }
-
-
-.card__description {
-  display: none ;
+.card__title {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  z-index: 1;
+  background-color: rgb(102, 102, 102);
+  top :1%;
 }
+
+.card__info .card__description{
+  display: none;
+}
+
+.card__info:hover .card__description{
+background-color: rgb(84, 84, 84);
+  display: block;
+  z-index: 3;
+  position: absolute;
+  bottom: 1%;
+}
+
+
+
 
 /* movie page start */
 

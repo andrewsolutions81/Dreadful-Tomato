@@ -20,7 +20,11 @@ export default function Main() {
     <div className="main-container">
       <Header setTab={setTab} search={search} setSearch={setSearch} />
       <div className="page__container">
-        <CardList list={list} />
+        {list.length > 1
+          ? <CardList list={list} />
+          :<div className="black__background" />
+        }
+        {/* <CardList list={list} /> */}
       </div>
     </div>
   );
