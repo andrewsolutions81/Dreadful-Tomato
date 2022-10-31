@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.background {
+  background-color: black;
+}
+
 /* header start */
 
 .header-main {
@@ -52,6 +56,12 @@
 .page__container {
   display:flex;
   flex-wrap:wrap;
+}
+
+.cardlist{
+  display:flex;
+  flex-wrap:wrap;
+  padding-left: 5%;
 }
 
 .every__item {
